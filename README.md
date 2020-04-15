@@ -55,6 +55,8 @@ Try tuning the lower_bound and upper_bound parameters to identify blue and green
 
 2) Use the given `webcam_sub.py` to implement image processing with red, green and blue objects. Try print out which color object is detected  
 
-3) Initialize a publisher to command the turtlebot. 
+3) Initialize a publisher to command the turtlebot. You can start the turtlesim by
+`$ rosrun turtlesim turtlesim_node`
 
-4) Integrate everything to command the turtlebot with color-code.
+4) Integrate everything to command the turtlebot with color-code. The final rqt graph would be like this
+![](images/0006.png)
