@@ -21,7 +21,7 @@ $ cd ~/ros_ws/src
 $ git clone https://github.com/hehonglu123/Robot_Programming.git
 $ catkin_make
 ```
-Once this is done, you have your own catkin workspace with ROS package 'Robot_Programming'. Since we are using rospy, it's not necessary to rebuild the workspace everytime you make modification to your script.
+Once this is done, you have your own catkin workspace with ROS package 'robot_programming'. Since we are using rospy, it's not necessary to rebuild the workspace everytime you make modification to your script.
 
 
 ## Commands for starting this node
