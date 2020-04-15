@@ -14,7 +14,7 @@ $ pip install opencv-python
 $ sudo apt-get install ros-melodic-cv-bridge
 ```
 ### Create workspace
-`$ mkdir ~/ros_ws/src`
+`$ mkdir -p ~/ros_ws/src`
 ### Clone Repo
 ```
 $ cd ~/ros_ws/src
