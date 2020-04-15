@@ -9,9 +9,10 @@ https://drive.google.com/file/d/1DOAUNTje5rRYcS00hzvwLPZ7xUVF88D_/view?usp=shari
 ## Initialization
 ### Packages install
 ROS is using python2, so every python package we are installing is python2 version.
-`$ pip install opencv-python`
-
-`$ sudo apt-get install ros-melodic-cv-bridge`
+```
+$ pip install opencv-python
+$ sudo apt-get install ros-melodic-cv-bridge
+```
 ### Create workspace
 `$ mkdir ~/ros_ws/src`
 ### Clone Repo
@@ -26,8 +27,10 @@ Once this is done, you have your own catkin workspace with ROS package 'Robot_Pr
 ## Commands for starting this node
 Make sure you have connected a webcam first.
 1) Source the directory:
-`$ cd ros_ws`
-`$ source devel/setup.bash`
+```
+$ cd ros_ws
+$ source devel/setup.bash
+```
 2) Run roscore:  
 `$ roscore`  
 3) Launch the webcam publisher with command:
