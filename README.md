@@ -51,7 +51,7 @@ The function `connectedComponentsWithStats(input_image)` runs the [Connected Com
 Try tuning the lower_bound and upper_bound parameters to identify blue and green objects!
 
 ## Task
-1) Use the given `detection_red.py` script to tune upper and lower bound for green and blue objects. Feel free to find green/blue images online.
+1) Use the given `detection_red.py` script to detect green and blue objects with different upper and lower bound (you can just swap the order). Feel free to find green/blue images online.
 
 2) Use the given `webcam_sub.py` to implement image processing with red, green and blue objects. Try print out which color object is detected  
 
