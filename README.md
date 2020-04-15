@@ -15,9 +15,11 @@ ROS is using python2, so every python package we are installing is python2 versi
 ### Create workspace
 `$ mkdir ~/ros_ws/src`
 ### Clone Repo
-`$ cd ~/ros_ws/src`
-`$ git clone https://github.com/hehonglu123/Robot_Programming.git`
-`$ catkin_make`
+```
+$ cd ~/ros_ws/src
+$ git clone https://github.com/hehonglu123/Robot_Programming.git
+$ catkin_make
+```
 Once this is done, you have your own catkin workspace with ROS package 'Robot_Programming'. Since we are using rospy, it's not necessary to rebuild the workspace everytime you make modification to your script.
 
 
