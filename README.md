@@ -10,6 +10,7 @@ https://drive.google.com/file/d/1DOAUNTje5rRYcS00hzvwLPZ7xUVF88D_/view?usp=shari
 ### Packages install
 ROS is using python2, so every python package we are installing is python2 version.
 `$ pip install opencv-python`
+
 `$ sudo apt-get install ros-melodic-cv-bridge`
 ### Create workspace
 `$ mkdir ~/ros_ws/src`
