@@ -18,7 +18,7 @@ def callback(data):
     #display the image
     if (not cv_image is None):
         cv2.imshow("Image",cv_image)
-    if cv2.waitKey(50)==-1:
+    if cv2.waitKey(1)==-1:
         cv2.destroyAllWindows()
     #TODO:
     # 3 desired colors (rbg values for each color)
