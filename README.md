@@ -6,7 +6,38 @@ video/2020-04-10-ColorControllerDemo.mp4
 or see this link:  
 https://drive.google.com/file/d/1DOAUNTje5rRYcS00hzvwLPZ7xUVF88D_/view?usp=sharing
 
+## Initialization
+### Packages install
+ROS is using python2, so every python package we are installing is python2 version.
+```
+$ pip install opencv-python
+$ sudo apt-get install ros-melodic-cv-bridge
+```
+### Create workspace
+`$ mkdir -p ~/ros_ws/src`
+### Clone Repo
+```
+$ cd ~/ros_ws/src
+$ git clone https://github.com/hehonglu123/Robot_Programming.git
+$ catkin_make
+```
+Once this is done, you have your own catkin workspace with ROS package 'robot_programming'. Since we are using rospy, it's not necessary to rebuild the workspace everytime you make modification to your script.
 
+
+## Commands for starting this node
+Make sure you have connected a webcam first.
+1) Source the directory:
+```
+$ cd ros_ws
+$ source devel/setup.bash
+```
+2) Run roscore:  
+`$ roscore`  
+3) Launch the webcam publisher with command:
+`$ rosrun  robot_programming webcam_pub.py` 
+4) Subscribe to image messages show it on a separate window:  
+`$ rosrun robot_programming webcam_sub.py`  
+You will be able to see a window pop out with webcam image.
 
 ## Color Object Identification
 There're total of 3 actions: go straight, turn left and turn right. Here you are provided a simple example script identifying the red object.
@@ -19,28 +50,13 @@ OpenCV image is a 3D array of 'BGR' format, with dimention (image_height,image_w
 The function `connectedComponentsWithStats(input_image)` runs the [Connected Component Labeling](https://en.wikipedia.org/wiki/Connected-component_labeling) on the input image, and returns stats associated with it. Using those stats, we can easily filter out noise (small count) and only identify objects at the center part of the image (centroid of the object near image center).
 Try tuning the lower_bound and upper_bound parameters to identify blue and green objects!
 
+## Task
+1) Use the given `detection_red.py` script to detect green and blue objects with different upper and lower bound (you can just swap the order). Feel free to find green/blue images online.
 
-## Commands for starting this node
-1) Run roscore:  
-`$ roscore`  
-2) Run Turtlesim Node, this will show you turtle sim in empty world:  
-`$ rosrun turtlesim turtlesim_node`  
-![](images/0001.png)
-3) Check Which topics that turtlesim subscribed graphically with command:  
-`$ rqt_graph`  
-![](images/0002.png)
-4) Make sure you select not to hide Dead Sinks and Leaf Topics, Tf.  
-You can also use to see what topics you have currently:  
-`$ rostopic list`  
-5) Launch the webcam publisher with command (Do not forget to `$ source /devel/setup.bash` in your workspace, if you have not done so already):  
-`$ rosrun  turtlesim_webcam webcam_pub.py`  
-6) Subscribe to image messages and publish velocity commands to Turtlesim via:  
-`$ rosrun turtlesim_webcam webcam_sub2.py`  
-7) Show RED color to camera, robot will move straight  
-![](images/0003.jpg) 
-8) Show GREEN color to camera, robot will turn clock wise  
-(0004.png)  
-9) Show BLUE color to camera, robot will tunr counter clock wise
-(0005.png)  
-10) When you refresh your rqt_graph, you will see the node connections:  
+2) Use the given `webcam_sub.py` to implement image processing with red, green and blue objects. Try print out which color object is detected  
+
+3) Initialize a publisher to command the turtlebot. You can start the turtlesim by
+`$ rosrun turtlesim turtlesim_node`
+
+4) Integrate everything to command the turtlebot with color-code. The final rqt graph would be like this
 ![](images/0006.png)
